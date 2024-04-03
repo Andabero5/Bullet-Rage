@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -6,11 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class CursorManager : MonoBehaviour
 {
-    public string sceneToShowCursor;
+    public List<string> scenesToShowCursor; 
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject); 
+        DontDestroyOnLoad(gameObject);
     }
 
     private void OnEnable()
@@ -30,7 +31,7 @@ public class CursorManager : MonoBehaviour
 
     void CheckCursorState(string sceneName)
     {
-        if (sceneName == sceneToShowCursor)
+        if (scenesToShowCursor.Contains(sceneName))
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
