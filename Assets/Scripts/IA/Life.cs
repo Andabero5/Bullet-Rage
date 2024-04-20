@@ -25,5 +25,6 @@ public class Life : MonoBehaviour
         {
             value = 0;
         }
+        UnityEngine.Debug.Log(value);
     }
 }
