@@ -144,6 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6780515916345415849}
   - component: {fileID: 6780515916337674061}
+  - component: {fileID: 5735610791019621049}
   m_Layer: 0
   m_Name: Tortoise_Boss_Anims
   m_TagString: Untagged
@@ -189,6 +190,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!136 &5735610791019621049
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6780515916345050249}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.64005625
+  m_Height: 1.3556992
+  m_Direction: 1
+  m_Center: {x: -0.020350266, y: 0.48923132, z: 0.13715057}
 --- !u!1 &6780515916345050251
 GameObject:
   m_ObjectHideFlags: 0
