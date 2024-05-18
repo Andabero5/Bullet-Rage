@@ -1,0 +1,9 @@
+CREATE DATABASE GameDB;
+USE GameDB;
+
+CREATE TABLE Users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    score INT DEFAULT 0,
+    game_time INT DEFAULT 0
+);
