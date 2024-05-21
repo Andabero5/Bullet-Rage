@@ -78,6 +78,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7757947126742549135, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7264397077903674650}
+    - targetCorrespondingSourceObject: {fileID: 7757947126742549135, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3613898008272334216}
+    - targetCorrespondingSourceObject: {fileID: 7757947126742549135, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 485261690957016989}
     - targetCorrespondingSourceObject: {fileID: 1267406449796445034, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4283532953363553607}
@@ -129,7 +135,6 @@ MonoBehaviour:
   noShootTime: 0
   canShoot: 0
   reloading: 0
-  fireGun: {fileID: 198719912503724044, guid: 3dd9cf2e209c504448f1c4c6835675cf, type: 3}
   isAShoot: {fileID: 0}
   isWithoutBullets: {fileID: 0}
   isTakingInMag: {fileID: 0}
@@ -143,6 +148,37 @@ MonoBehaviour:
   bulletsInMag: 0
   magSize: 12
   maxBullets: 100
+--- !u!114 &3613898008272334216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2867417286392604782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd25abfdc6806e94d9623fe101a96556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity: 0.3
+  maxQuantity: 0.3
+  time: 1
+--- !u!114 &485261690957016989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2867417286392604782}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ced028c1b799584d8d1d0e5f4812525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobbingSpeed: 0.05
+  bobbingAmount: 0.015
+  midpoint: -0.666
+  gunLogic: {fileID: 7264397077903674650}
 --- !u!95 &4552356144310477306 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8309115824573975323, guid: 5c59210965ffbcc4093fe99a29edb777, type: 3}

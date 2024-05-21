@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 4570468717745386}
   - component: {fileID: 114628272778029114}
   - component: {fileID: 3874713419751049644}
+  - component: {fileID: 156672440024395218}
+  - component: {fileID: 4518635293331570978}
   m_Layer: 0
   m_Name: CrossbowScripted
   m_TagString: Untagged
@@ -162,6 +164,37 @@ MonoBehaviour:
   bulletsInMag: 0
   magSize: 5
   maxBullets: 80
+--- !u!114 &156672440024395218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463872367739468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd25abfdc6806e94d9623fe101a96556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantity: 0.3
+  maxQuantity: 0.3
+  time: 2
+--- !u!114 &4518635293331570978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463872367739468}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ced028c1b799584d8d1d0e5f4812525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bobbingSpeed: 0.1
+  bobbingAmount: 0.03
+  midpoint: -0.766
+  gunLogic: {fileID: 3874713419751049644}
 --- !u!1 &1691415498198172
 GameObject:
   m_ObjectHideFlags: 0
