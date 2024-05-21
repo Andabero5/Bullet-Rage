@@ -16,8 +16,6 @@ public class GunLogic : MonoBehaviour
     public bool canShoot = false;
     public bool reloading = false;
 
-    [Header("Referencia de Objetos")]
-    public ParticleSystem fireGun;
 
     [Header("Referencia de Sonidos")]
     public AudioClip isAShoot;
@@ -29,12 +27,12 @@ public class GunLogic : MonoBehaviour
 
     [Header("Atributos de Arma")]
     public FireMode fireMode = FireMode.FullAuto;
-    public float damage = 3;
+    public float damage;
     public float fireRate = 0.3f;
     public int remainingBullets;
     public int bulletsInMag;
-    public int magSize = 12;
-    public int maxBullets = 100;
+    public int magSize;
+    public int maxBullets;
 
 
     // Start is called before the first frame update
@@ -90,8 +88,6 @@ public class GunLogic : MonoBehaviour
     {
         audioSource.PlayOneShot(isAShoot);
         noShootTime = true;
-        fireGun.Stop();
-        fireGun.Play();
 
         ReproduceShootingAnimation();
         bulletsInMag--;
