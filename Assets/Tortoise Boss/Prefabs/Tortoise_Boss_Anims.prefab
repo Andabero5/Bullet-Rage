@@ -253,7 +253,7 @@ MonoBehaviour:
   enemy: {fileID: 6780515916345050249}
   isLife0: 0
   isAttacking: 0
-  speed: 2
+  speed: 3.5
   angularSpeed: 120
   damage: 20
   isLooking: 0
