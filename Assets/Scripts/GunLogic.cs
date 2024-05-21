@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public enum FireMode
@@ -16,6 +18,8 @@ public class GunLogic : MonoBehaviour
     public bool canShoot = false;
     public bool reloading = false;
 
+    [Header("Referencia de Objetos")]
+    public Transform shootPoint;
 
     [Header("Referencia de Sonidos")]
     public AudioClip isAShoot;
@@ -92,6 +96,32 @@ public class GunLogic : MonoBehaviour
         ReproduceShootingAnimation();
         bulletsInMag--;
         StartCoroutine(RestartNoShootTime());
+
+        DirectShoot();
+    }
+
+    void DirectShoot()
+    {
+        
+        RaycastHit hit;
+        if(Physics.Raycast(shootPoint.position, shootPoint.forward, out hit))
+        {
+            if (hit.transform.CompareTag("AnkleGrabber") || 
+               hit.transform.CompareTag("TortoiseBoss") || 
+               hit.transform.CompareTag("CyberMonster"))
+            {
+                Life life = hit.transform.GetComponent<Life>();
+                if(life == null)
+                {
+                    throw new System.Exception("The component Life of the Enemy has not been found");
+                }
+                else
+                {
+                    life.takeDamage(damage);
+                    UnityEngine.Debug.Log("El enemigo ha recibido daño");
+                }
+            }
+        }
     }
 
     public virtual void ReproduceShootingAnimation()

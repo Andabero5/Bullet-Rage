@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -21,6 +22,7 @@ public class EnemyLogic : MonoBehaviour
     public float speed;
     public float angularSpeed;
     public float damage;
+    public Transform other;
     public bool isLooking;
     private string enemyTag;
 
@@ -102,6 +104,20 @@ public class EnemyLogic : MonoBehaviour
             isLife0 = true;
             agent.isStopped = true;
             collider.enabled = false;
+
+            if (enemyTag == "AnkleGrabber")
+            {
+                animator.SetBool("Dies", true);
+            }
+            if (enemyTag == "TortoiseBoss")
+            {
+                animator.SetBool("Death", true);
+            }
+            if (enemyTag == "CyberMonster")
+            {
+                animator.SetBool("Death", true);
+            }
+
             animator.CrossFadeInFixedTime("isLife0", 0.1f);
             Destroy(gameObject, 3f);
         }
