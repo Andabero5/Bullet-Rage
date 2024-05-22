@@ -5,11 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbbb2d4d-933d-400f-9fd6-f2e2b8bca2a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Rage/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimationPlayer.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimationPlayer.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cyber Monsters 2/Prefab/Cyber Monsters 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cyber Monsters 2/Prefab/Cyber Monsters 2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ghoul/Assets/Prefabs/AnkleGrabber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ghoul/Assets/Prefabs/AnkleGrabber.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Escenario.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Escenario.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Login.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Login.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menú.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menú.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Score.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Score.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IA/EnemyLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IA/EnemyLogic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playermov.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playermov.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetTextsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SetTextsMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/web/DBManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/web/DBManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tortoise Boss/Prefabs/Tortoise_Boss_Anims.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tortoise Boss/Prefabs/Tortoise_Boss_Anims.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +29,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/45/0b5142a8/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/83/256f931f/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scenes/Login.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/UserNameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/UserNameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/UserNameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Proyectos Unity/My project Principal/Assets/Scripts/CameraScript.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -37,6 +50,8 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "bade__datos",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -87,10 +102,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="18260">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="18260" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -118,13 +133,16 @@
       <workItem from="1713926338071" duration="2983000" />
       <workItem from="1713929560252" duration="5620000" />
       <workItem from="1716055667317" duration="6327000" />
+      <workItem from="1716064115678" duration="4714000" />
+      <workItem from="1716154685475" duration="6720000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityProjectDiscoverer">
     <option name="hasUnityReference" value="true" />
     <option name="unityProject" value="true" />
@@ -149,82 +167,30 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/SetTextsMenu.cs</url>
-          <line>59</line>
-          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\SetTextsMenu.cs" containingFunctionPresentation="Method 'ProcessUserBestScore'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\UserNameManager.cs" containingFunctionPresentation="Method 'Create'">
             <startOffsets>
-              <option value="1785" />
+              <option value="1000" />
             </startOffsets>
             <endOffsets>
-              <option value="1855" />
+              <option value="1030" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/SetTextsMenu.cs</url>
-          <line>62</line>
-          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\SetTextsMenu.cs" containingFunctionPresentation="Method 'ProcessUserBestScore'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs</url>
+          <line>36</line>
+          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\UserNameManager.cs" containingFunctionPresentation="Method 'Create'">
             <startOffsets>
-              <option value="1929" />
+              <option value="958" />
             </startOffsets>
             <endOffsets>
-              <option value="1985" />
+              <option value="977" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/SetTextsMenu.cs</url>
-          <line>63</line>
-          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\SetTextsMenu.cs" containingFunctionPresentation="Method 'ProcessUserBestScore'">
-            <startOffsets>
-              <option value="2002" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2062" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/web/DBManager.cs</url>
-          <line>51</line>
-          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\web\DBManager.cs" containingFunctionPresentation="Method 'GetUserBestScore'">
-            <startOffsets>
-              <option value="1907" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1945" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/web/DBManager.cs</url>
-          <line>60</line>
-          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\web\DBManager.cs" containingFunctionPresentation="Method 'GetUserBestScore'">
-            <startOffsets>
-              <option value="2240" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2312" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/web/DBManager.cs</url>
-          <line>61</line>
-          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\web\DBManager.cs" containingFunctionPresentation="Method 'GetUserBestScore'">
-            <startOffsets>
-              <option value="2325" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2374" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
+          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

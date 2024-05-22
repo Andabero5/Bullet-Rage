@@ -23,6 +23,34 @@ public class EnemyLogic : MonoBehaviour
     public float damage;
     public bool isLooking;
     private string enemyTag;
+    private AudioSource audioSource;
+    
+    
+   //configuración audios
+    private SoundManager soundManager;
+
+    // Índices de los clips de audio para cada tipo de enemigo
+    private int ankleGrabberAudioIndex = 0;
+    private int tortoiseBossAudioIndex = 1;
+    private int cyberMonsterAudioIndex = 2;
+
+    // Valores de Spatial Blend y Spread para cada enemigo
+    private float ankleGrabberSpatialBlend = 1.0f;
+    private float tortoiseBossSpatialBlend = 1.0f;
+    private float cyberMonsterSpatialBlend = 1.0f;
+
+    private float ankleGrabberSpread = 180f;
+    private float tortoiseBossSpread = 180f;
+    private float cyberMonsterSpread = 180f;
+
+    // Valores de minDistance y maxDistance para cada enemigo
+    private float ankleGrabberMinDistance = 1f;
+    private float tortoiseBossMinDistance = 1f;
+    private float cyberMonsterMinDistance = 1f;
+
+    private float ankleGrabberMaxDistance = 1f;
+    private float tortoiseBossMaxDistance = 10f;
+    private float cyberMonsterMaxDistance = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -55,6 +83,20 @@ public class EnemyLogic : MonoBehaviour
         life = GetComponent<Life>();
         animator = GetComponent<Animator>();
         collider = GetComponent<Collider>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+        // Inicializa el SoundManager
+        soundManager = FindObjectOfType<SoundManager>();
+        if (soundManager == null)
+        {
+            throw new Exception("SoundManager not found in the scene.");
+        }
+
+
+        PlayEnemyAudio();
     }
 
     // Update is called once per frame
@@ -157,4 +199,27 @@ public class EnemyLogic : MonoBehaviour
         agent.speed = speed;
         agent.angularSpeed = angularSpeed;
     }
+    
+    
+    
+    
+    void PlayEnemyAudio()
+    {
+        switch (enemyTag)
+        {
+            case "AnkleGrabber":
+                soundManager.SelectAudioWithDelay(audioSource, ankleGrabberAudioIndex, 0.1f, ankleGrabberSpatialBlend, ankleGrabberSpread, ankleGrabberMinDistance, ankleGrabberMaxDistance, 10f); // Ajusta el volumen según sea necesario
+                break;
+            case "TortoiseBoss":
+                soundManager.SelectAudioWithDelay(audioSource, tortoiseBossAudioIndex, 1.0f, tortoiseBossSpatialBlend, tortoiseBossSpread, tortoiseBossMinDistance, tortoiseBossMaxDistance,5); // Reproduce con retraso
+                break;
+            case "CyberMonster":
+                soundManager.SelectAudioWithDelay(audioSource, cyberMonsterAudioIndex, 1.0f, cyberMonsterSpatialBlend, cyberMonsterSpread, cyberMonsterMinDistance, cyberMonsterMaxDistance,5); // Ajusta el volumen según sea necesario
+                break;
+            default:
+                Debug.LogWarning("Unknown enemy tag: " + enemyTag);
+                break;
+        }
+    }
+
 }

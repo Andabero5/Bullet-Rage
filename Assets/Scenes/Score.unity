@@ -286,12 +286,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b21451c127f343a44abfe72309ac338f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bestScoreText: {fileID: 1957058025}
+  topScorerNameText: {fileID: 0}
+  topScorerScoreText: {fileID: 0}
+  topScorerTimeText: {fileID: 0}
+  bestScoreText: {fileID: 0}
   bestTimeText: {fileID: 0}
-  lastScoreText: {fileID: 0}
-  lastTimeText: {fileID: 0}
   scoresText: {fileID: 1957058025}
-  timesText: {fileID: 0}
   dbManager: {fileID: 11400000, guid: 3cc3ba72fc101ab4da057a10edd89834, type: 2}
 --- !u!4 &71177479
 Transform:
