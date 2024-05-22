@@ -5,26 +5,22 @@ using UnityEngine;
 public class Life : MonoBehaviour
 {
     public float value = 100;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public delegate void OnLifeChanged(float newValue);
+    public event OnLifeChanged onLifeChanged;
 
     public void takeDamage(float damage)
     {
         value -= damage;
-        if(value < 0)
+        if (value < 0)
         {
             value = 0;
         }
-        UnityEngine.Debug.Log(value);
+
+        if (onLifeChanged != null)
+        {
+            onLifeChanged(value);
+        }
+
+        UnityEngine.Debug.Log("Vida actual: " + value);
     }
 }

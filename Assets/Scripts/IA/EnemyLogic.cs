@@ -26,6 +26,7 @@ public class EnemyLogic : MonoBehaviour
     public bool isLooking;
     private string enemyTag;
     private AudioSource audioSource;
+    private Coroutine audioCoroutine;
     
     
    //configuración audios
@@ -159,6 +160,10 @@ public class EnemyLogic : MonoBehaviour
             {
                 animator.SetBool("Death", true);
             }
+            if (audioCoroutine != null)
+            {
+                StopCoroutine(audioCoroutine);
+            }
 
             animator.CrossFadeInFixedTime("isLife0", 0.1f);
             Destroy(gameObject, 3f);
@@ -224,13 +229,13 @@ public class EnemyLogic : MonoBehaviour
         switch (enemyTag)
         {
             case "AnkleGrabber":
-                soundManager.SelectAudioWithDelay(audioSource, ankleGrabberAudioIndex, 0.1f, ankleGrabberSpatialBlend, ankleGrabberSpread, ankleGrabberMinDistance, ankleGrabberMaxDistance, 10f); // Ajusta el volumen según sea necesario
+                audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, ankleGrabberAudioIndex, 0.1f, ankleGrabberSpatialBlend, ankleGrabberSpread, ankleGrabberMinDistance, ankleGrabberMaxDistance, 10f));
                 break;
             case "TortoiseBoss":
-                soundManager.SelectAudioWithDelay(audioSource, tortoiseBossAudioIndex, 1.0f, tortoiseBossSpatialBlend, tortoiseBossSpread, tortoiseBossMinDistance, tortoiseBossMaxDistance,5); // Reproduce con retraso
+                audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, tortoiseBossAudioIndex, 1.0f, tortoiseBossSpatialBlend, tortoiseBossSpread, tortoiseBossMinDistance, tortoiseBossMaxDistance,5));
                 break;
             case "CyberMonster":
-                soundManager.SelectAudioWithDelay(audioSource, cyberMonsterAudioIndex, 1.0f, cyberMonsterSpatialBlend, cyberMonsterSpread, cyberMonsterMinDistance, cyberMonsterMaxDistance,5); // Ajusta el volumen según sea necesario
+                audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, cyberMonsterAudioIndex, 1.0f, cyberMonsterSpatialBlend, cyberMonsterSpread, cyberMonsterMinDistance, cyberMonsterMaxDistance,5));
                 break;
             default:
                 Debug.LogWarning("Unknown enemy tag: " + enemyTag);

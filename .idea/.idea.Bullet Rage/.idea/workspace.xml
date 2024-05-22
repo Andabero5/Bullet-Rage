@@ -4,21 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbbb2d4d-933d-400f-9fd6-f2e2b8bca2a3" name="Changes" comment="">
+    <list default="true" id="fbbb2d4d-933d-400f-9fd6-f2e2b8bca2a3" name="Changes" comment="Se añaden sonidos">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Rage/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/AnimationPlayer.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/AnimationPlayer.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cyber Monsters 2/Prefab/Cyber Monsters 2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cyber Monsters 2/Prefab/Cyber Monsters 2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ghoul/Assets/Prefabs/AnkleGrabber.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ghoul/Assets/Prefabs/AnkleGrabber.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Nokobot/Modern Guns - Handgun/URP/ModernGuns_Handgun_v1.2_URP.unitypackage.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Escenario.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Escenario.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Login.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Login.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Score.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Score.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GunLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GunLogic.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/IA/EnemyLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IA/EnemyLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Playermov.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Playermov.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetTextsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SetTextsMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/web/DBManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/web/DBManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tortoise Boss/Prefabs/Tortoise_Boss_Anims.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Tortoise Boss/Prefabs/Tortoise_Boss_Anims.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/IA/Life.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IA/Life.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,12 +21,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Andabero5"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Andabero5/Bullet-Rage",
+    "accountId": "717865fd-9e05-4687-9d4f-437c1e0829c6"
+  }
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/45/0b5142a8/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/83/256f931f/SetupCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dfc17dda9cbb441b8dc74d81535b7d4f10200/c1/4373f8f1/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Animations/AnimationPlayer.controller" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Animations/AnimationPlayer.controller" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Cyber Monsters 2/Prefab/Cyber Monsters 2.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Cyber Monsters 2/Prefab/Cyber Monsters 2.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Cyber Monsters 2/Prefab/Cyber Monsters 2.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Cyber Monsters 2/Prefab/Cyber Monsters 2.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Ghoul/Assets/Prefabs/AnkleGrabber.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scenes/Escenario.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scenes/Login.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scenes/Score.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/CameraBalancing.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/IA/EnemyLogic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/Playermov.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/SetTextsMenu.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/TextChanger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/UserNameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/UserNameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/UserNameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/web/DBManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/web/DBManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/web/DBManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Tortoise Boss/Prefabs/Tortoise_Boss_Anims.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Proyectos Unity/My project Principal/Assets/Scripts/CameraScript.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
@@ -45,28 +69,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "bade__datos",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;bade__datos&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\USER\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\USER\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\USER\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Jugable/Bullet Rage.exe" />
@@ -135,7 +159,25 @@
       <workItem from="1716055667317" duration="6327000" />
       <workItem from="1716064115678" duration="4714000" />
       <workItem from="1716154685475" duration="6720000" />
+      <workItem from="1716336616287" duration="6744000" />
     </task>
+    <task id="LOCAL-00001" summary="se corrigen datos de la db">
+      <option name="closed" value="true" />
+      <created>1716336772009</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716336772009</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Se añaden sonidos">
+      <option name="closed" value="true" />
+      <created>1716336796809</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716336796809</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,7 +196,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="bade_datos" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -162,6 +216,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="se corrigen datos de la db" />
+    <MESSAGE value="Se añaden sonidos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se añaden sonidos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

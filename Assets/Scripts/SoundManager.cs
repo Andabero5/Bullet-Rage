@@ -6,6 +6,9 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine;
 
+using System.Collections;
+using UnityEngine;
+
 public class SoundManager : MonoBehaviour
 {
     [SerializeField] private AudioClip[] audios;
@@ -17,18 +20,23 @@ public class SoundManager : MonoBehaviour
             audioSource.PlayOneShot(audios[indice], volumen);
         }
     }
-
-
-    public void SelectAudioWithDelay(AudioSource audioSource, int indice, float volumen, float spatialBlend, float spread, float minDist, float maxDist ,float delay)
+    public void SelectAudio(AudioSource audioSource, AudioClip audioClip, float volumen)
     {
-        if (audioSource != null)
+        if (audioSource != null && audioClip != null)
         {
-            StartCoroutine(PlayAudioWithDelay(audioSource, indice, volumen, spatialBlend, spread, minDist, maxDist, AudioRolloffMode.Logarithmic, delay));
+            audioSource.PlayOneShot(audioClip, volumen);
         }
+    }
+
+    public IEnumerator SelectAudioWithDelay(AudioSource audioSource, int indice, float volumen, float spatialBlend, float spread, float minDist, float maxDist, float delay)
+    {
+        yield return PlayAudioWithDelay(audioSource, indice, volumen, spatialBlend, spread, minDist, maxDist, AudioRolloffMode.Logarithmic, delay);
     }
     
     private void SetAudioProperties(AudioSource audioSource, float spatialBlend, float spread, float minDist, float maxDist, AudioRolloffMode rolloffMode)
     {
+        if (audioSource == null) return;
+
         audioSource.spatialBlend = spatialBlend;
         audioSource.spread = spread;
         audioSource.minDistance = minDist;
@@ -36,9 +44,9 @@ public class SoundManager : MonoBehaviour
         audioSource.rolloffMode = rolloffMode;
     }
     
-    IEnumerator PlayAudioWithDelay(AudioSource audioSource, int indice, float volumen, float spatialBlend, float spread, float minDist, float maxDist, AudioRolloffMode rolloffMode, float delay)
+    private IEnumerator PlayAudioWithDelay(AudioSource audioSource, int indice, float volumen, float spatialBlend, float spread, float minDist, float maxDist, AudioRolloffMode rolloffMode, float delay)
     {
-        while (true)
+        while (audioSource != null)
         {
             SetAudioProperties(audioSource, spatialBlend, spread, minDist, maxDist, rolloffMode);
             audioSource.PlayOneShot(audios[indice], volumen);

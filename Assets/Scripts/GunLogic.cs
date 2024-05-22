@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -37,13 +38,24 @@ public class GunLogic : MonoBehaviour
     public int bulletsInMag;
     public int magSize;
     public int maxBullets;
+    private SoundManager soundManager;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        soundManager = FindObjectOfType<SoundManager>();
+        if (soundManager == null)
+        {
+            throw new System.Exception("SoundManager not found in the scene.");
+        }
+
         animator = GetComponent<Animator>();
+
+        // Verificar y reutilizar el AudioSource existente
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
 
         bulletsInMag = magSize;
         remainingBullets = maxBullets;
@@ -51,7 +63,6 @@ public class GunLogic : MonoBehaviour
         Invoke("EnableGun", 0.5f);
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (fireMode == FireMode.FullAuto && Input.GetButton("Fire1"))
@@ -90,7 +101,7 @@ public class GunLogic : MonoBehaviour
 
     void Shoot()
     {
-        audioSource.PlayOneShot(isAShoot);
+        soundManager.SelectAudio(audioSource, isAShoot, 0.5f);
         noShootTime = true;
 
         ReproduceShootingAnimation();
@@ -102,23 +113,22 @@ public class GunLogic : MonoBehaviour
 
     void DirectShoot()
     {
-        
         RaycastHit hit;
-        if(Physics.Raycast(shootPoint.position, shootPoint.forward, out hit))
+        if (Physics.Raycast(shootPoint.position, shootPoint.forward, out hit))
         {
             if (hit.transform.CompareTag("AnkleGrabber") || 
                hit.transform.CompareTag("TortoiseBoss") || 
                hit.transform.CompareTag("CyberMonster"))
             {
                 Life life = hit.transform.GetComponent<Life>();
-                if(life == null)
+                if (life == null)
                 {
                     throw new System.Exception("The component Life of the Enemy has not been found");
                 }
                 else
                 {
                     life.takeDamage(damage);
-                    UnityEngine.Debug.Log("El enemigo ha recibido daño");
+                    UnityEngine.Debug.Log("El enemigo ha recibido daÃ±o");
                 }
             }
         }
@@ -134,7 +144,7 @@ public class GunLogic : MonoBehaviour
 
     void NoBullets()
     {
-        audioSource.PlayOneShot(isWithoutBullets);
+        soundManager.SelectAudio(audioSource, isWithoutBullets, 0.5f);
         noShootTime = true;
         StartCoroutine(RestartNoShootTime());
     }
@@ -159,7 +169,6 @@ public class GunLogic : MonoBehaviour
         reloading = true;
         ReloadAmmunition();
         RestartReload();
-        //animator.CrossFadeInFixedTime("Reload", 0.1f);
     }
 
     void ReloadAmmunition()
@@ -173,22 +182,22 @@ public class GunLogic : MonoBehaviour
 
     public void DrawOn()
     {
-        audioSource.PlayOneShot(isDrawingGun);
+        soundManager.SelectAudio(audioSource, isDrawingGun, 0.5f);
     }
 
     public void TakingInMag()
     {
-        audioSource.PlayOneShot(isTakingInMag);
+        soundManager.SelectAudio(audioSource, isTakingInMag, 0.5f);
     }
 
     public void TakingOutMag()
     {
-        audioSource.PlayOneShot(isTakingOutMag);
+        soundManager.SelectAudio(audioSource, isTakingOutMag, 0.5f);
     }
 
     public void NoAmmunition()
     {
-        audioSource.PlayOneShot(noAmmunition);
+        soundManager.SelectAudio(audioSource, noAmmunition, 0.5f);
         Invoke("RestartReload", 0.1f);
     }
 
