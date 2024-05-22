@@ -7,7 +7,7 @@ using UnityEngine.Networking;
 [CreateAssetMenu(fileName = "DatabaseManager", menuName = "ScriptableObjects/DatabaseManager", order = 1)]
 public class DBManager : ScriptableObject
 {
-    public string baseUrl = "http://localhost/db.php";  // Ajusta esto a la URL de tu servidor
+    public string baseUrl = "http://localhost/db.php";
 
     public IEnumerator CreateOrUpdateUser(UserData userData, Action<string> onResponse)
     {

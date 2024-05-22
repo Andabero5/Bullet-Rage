@@ -17,14 +17,15 @@ public class SetTextsMenu : MonoBehaviour
     public TextMeshProUGUI bestScoreText;
     public TextMeshProUGUI bestTimeText;
     public TextMeshProUGUI scoresText;
-    public DBManager dbManager;  
+    public DBManager dbManager;
 
-    private string currentUsername = "Aasd";  // Asegúrate de ajustar esto al nombre de usuario actual
+    private string currentUsername = "";
 
     private void Start()
     {
         if (dbManager != null)
         {
+            currentUsername = PlayerPrefs.GetString("user_name", "");
             StartCoroutine(dbManager.GetTopScorer(ProcessTopScorer));
             StartCoroutine(dbManager.GetUserBestScore(currentUsername, ProcessUserBestScore));
             StartCoroutine(dbManager.GetScores(ProcessScores));
