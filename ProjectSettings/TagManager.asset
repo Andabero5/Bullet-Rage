@@ -8,6 +8,8 @@ TagManager:
   - AnkleGrabber
   - TortoiseBoss
   - CyberMonster
+  - Magnum
+  - Crossbow
   layers:
   - Default
   - TransparentFX
