@@ -1580,13 +1580,17 @@ MonoBehaviour:
   runSpeed: 30
   rotationSpeed: 250
   animator: {fileID: 441668135}
-  rb: {fileID: 441668134}
   alturaSalto: 3
+  gravedad: -9.81
   checkPiso: {fileID: 1001882499}
   maskPiso:
     serializedVersion: 2
     m_Bits: 64
   mouseSensitivity: 100
+  camaraPersonaje: {fileID: 963194227}
+  characterController: {fileID: 441668141}
+  pitchMin: -30
+  pitchMax: 60
   footstepAudioIndex: 3
   footstepDelay: 0.5
 --- !u!136 &441668133
@@ -1789,6 +1793,32 @@ MonoBehaviour:
   playerLife: {fileID: 441668137}
   maxLife: 100
   gameOverManager: {fileID: 321121045}
+--- !u!143 &441668141
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 441668131}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1.849746
+  m_Radius: 0.2480893
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0.01007703, y: 0.9286991, z: -0.02015517}
 --- !u!1001 &446096065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4076,12 +4106,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.068858154, y: -0.02372295, z: 0.0016378704, w: 0.9973431}
-  m_LocalPosition: {x: 67.30439, y: 10.775938, z: -206.21518}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0.06885815, y: -0.02372295, z: 0.0016378702, w: 0.9973431}
+  m_LocalPosition: {x: -0.014, y: 1.766, z: 0.08}
+  m_LocalScale: {x: 0.29260433, y: 0.29260433, z: 0.29260433}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 441668136}
   m_LocalEulerAnglesHint: {x: 7.899, y: -2.725, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
@@ -4095,12 +4125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2179a34b401769641a8a59a34345eb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 441668131}
-  defaultMouseSensitivity: 500
-  pitchMin: 0
-  pitchMax: 100
-  thirdPersonDistance: 5
-  thirdPersonHeight: 5
 --- !u!1 &972477584
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,7 +5026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc1965af11effae45bb03039b8b42b11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.18
+      value: 4.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fc1965af11effae45bb03039b8b42b11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5064,6 +5088,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc1965af11effae45bb03039b8b42b11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1909480050}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: fc1965af11effae45bb03039b8b42b11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 963194228}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc1965af11effae45bb03039b8b42b11, type: 3}
       insertIndex: -1
@@ -5086,6 +5113,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc1965af11effae45bb03039b8b42b11, type: 3}
       insertIndex: -1
       addedObject: {fileID: 441668139}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fc1965af11effae45bb03039b8b42b11, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 441668141}
   m_SourcePrefab: {fileID: 100100000, guid: fc1965af11effae45bb03039b8b42b11, type: 3}
 --- !u!1 &1228180693
 GameObject:
@@ -8175,7 +8205,6 @@ SceneRoots:
   - {fileID: 231109489}
   - {fileID: 623280167}
   - {fileID: 100007338}
-  - {fileID: 963194228}
   - {fileID: 1209159502}
   - {fileID: 972477588}
   - {fileID: 713531082}
