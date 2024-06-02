@@ -79,6 +79,11 @@ public class DBManager : ScriptableObject
             onResponse?.Invoke(request.downloadHandler.text);
         }
     }
+    
+    public IEnumerator SaveUserData(UserData userData, Action<string> onResponse)
+    {
+        yield return CreateOrUpdateUser(userData, onResponse);
+    }
 
     [System.Serializable]
     public class UserData

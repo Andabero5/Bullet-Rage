@@ -151,14 +151,17 @@ public class EnemyLogic : MonoBehaviour
             if (enemyTag == "AnkleGrabber")
             {
                 animator.SetBool("Dies", true);
+                Score(50);
             }
             if (enemyTag == "TortoiseBoss")
             {
                 animator.SetBool("Death", true);
+                Score(100);
             }
             if (enemyTag == "CyberMonster")
             {
                 animator.SetBool("Death", true);
+                Score(200);
             }
             if (audioCoroutine != null)
             {
@@ -168,6 +171,13 @@ public class EnemyLogic : MonoBehaviour
             animator.CrossFadeInFixedTime("isLife0", 0.1f);
             Destroy(gameObject, 3f);
         }
+    }
+
+    private static void Score(int scoreSum)
+    {
+       var newScore = PlayerPrefs.GetInt("score",0) + scoreSum;
+       PlayerPrefs.SetInt("score",newScore);
+       
     }
 
     void chase()

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+
 public class TextChanger : MonoBehaviour
 {
     public TMP_Text texto;
@@ -10,6 +11,9 @@ public class TextChanger : MonoBehaviour
     public float changeInterval = 5f;
     private int currentTextIndex = 0;
     private bool isVisible = true;
+    public TMP_Text scoreText;
+
+    private int currentScore;
 
     private string[] textos = new string[]
     {
@@ -27,7 +31,14 @@ public class TextChanger : MonoBehaviour
             Debug.LogError("Text component is not assigned.");
             return;
         }
-
+        if (scoreText == null)
+        {
+            Debug.LogError("Score Text component is not assigned.");
+            return;
+        }
+        
+        currentScore = PlayerPrefs.GetInt("score", 0);
+        UpdateScoreText();
         StartCoroutine(ChangeTextRoutine());
     }
 
@@ -37,6 +48,13 @@ public class TextChanger : MonoBehaviour
         {
             isVisible = !isVisible;
             panel.gameObject.SetActive(isVisible);
+        }
+        
+        int newScore = PlayerPrefs.GetInt("score");
+        if (newScore != currentScore)
+        {
+            currentScore = newScore;
+            UpdateScoreText();
         }
     }
 
@@ -49,5 +67,10 @@ public class TextChanger : MonoBehaviour
             currentTextIndex = (currentTextIndex + 1) % textos.Length;
             texto.text = textos[currentTextIndex];
         }
+    }
+
+    void UpdateScoreText()
+    {
+        scoreText.text = currentScore.ToString();
     }
 }
