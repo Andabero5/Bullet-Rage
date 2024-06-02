@@ -9,7 +9,7 @@ public class DBManager : ScriptableObject
 {
     public string baseUrl = "http://localhost/db.php";
 
-    public IEnumerator CreateOrUpdateUser(UserData userData, Action<string> onResponse)
+    public IEnumerator CreateUser(UserData userData, Action<string> onResponse)
     {
         WWWForm form = userData.ToForm();
         using (UnityWebRequest www = UnityWebRequest.Post(baseUrl, form))
@@ -80,11 +80,26 @@ public class DBManager : ScriptableObject
         }
     }
     
-    public IEnumerator SaveUserData(UserData userData, Action<string> onResponse)
+    public IEnumerator UpdateUser(UserData userData, Action<string> onResponse)
     {
-        yield return CreateOrUpdateUser(userData, onResponse);
-    }
+        WWWForm form = userData.ToForm();
+        form.AddField("action", "updateUser");
+        using (UnityWebRequest www = UnityWebRequest.Post(baseUrl, form))
+        {
+            yield return www.SendWebRequest();
 
+            if (www.result == UnityWebRequest.Result.ConnectionError || www.result == UnityWebRequest.Result.ProtocolError)
+            {
+                Debug.LogError("Error: " + www.error);
+                onResponse?.Invoke(www.error);
+            }
+            else
+            {
+                Debug.Log("Response: " + www.downloadHandler.text);
+                onResponse?.Invoke(www.downloadHandler.text);
+            }
+        }
+    }
     [System.Serializable]
     public class UserData
     {

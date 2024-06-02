@@ -50,7 +50,7 @@ public class TextChanger : MonoBehaviour
             panel.gameObject.SetActive(isVisible);
         }
         
-        int newScore = PlayerPrefs.GetInt("score");
+        var newScore = PlayerPrefs.GetInt("score");
         if (newScore != currentScore)
         {
             currentScore = newScore;

@@ -9,6 +9,11 @@ public class GameTimer : MonoBehaviour
     private float elapsedTime;
     private bool isPaused;
 
+    public float GetElapsedTime()
+    {
+        return elapsedTime;
+    }
+
     void Start()
     {
         if (timeText == null)
@@ -42,10 +47,13 @@ public class GameTimer : MonoBehaviour
         isPaused = false;
     }
 
-    void UpdateTimeText()
+    private void UpdateTimeText()
     {
         int minutes = Mathf.FloorToInt(elapsedTime / 60F);
         int seconds = Mathf.FloorToInt(elapsedTime % 60F);
-        timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        if (timeText != null)
+        {
+            timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
     }
 }

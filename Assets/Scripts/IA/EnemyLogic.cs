@@ -151,17 +151,17 @@ public class EnemyLogic : MonoBehaviour
             if (enemyTag == "AnkleGrabber")
             {
                 animator.SetBool("Dies", true);
-                Score(50);
+                Invoke(nameof(UpdateScore), 0.5f);
             }
             if (enemyTag == "TortoiseBoss")
             {
                 animator.SetBool("Death", true);
-                Score(100);
+                Invoke(nameof(UpdateScore), 0.5f);
             }
             if (enemyTag == "CyberMonster")
             {
                 animator.SetBool("Death", true);
-                Score(200);
+                Invoke(nameof(UpdateScore), 0.5f);
             }
             if (audioCoroutine != null)
             {
@@ -173,11 +173,28 @@ public class EnemyLogic : MonoBehaviour
         }
     }
 
+    private void UpdateScore()
+    {
+        if (enemyTag == "AnkleGrabber")
+        {
+            Score(50);
+        }
+        else if (enemyTag == "TortoiseBoss")
+        {
+            Score(100);
+        }
+        else if (enemyTag == "CyberMonster")
+        {
+            Score(200);
+        }
+    } 
     private static void Score(int scoreSum)
     {
-       var newScore = PlayerPrefs.GetInt("score",0) + scoreSum;
-       PlayerPrefs.SetInt("score",newScore);
-       
+        int currentScore = PlayerPrefs.GetInt("score", 0);
+        int newScore = currentScore + scoreSum;
+        PlayerPrefs.SetInt("score", newScore);
+        PlayerPrefs.Save();
+        Debug.Log($"Score updated. New score: {newScore}");
     }
 
     void chase()

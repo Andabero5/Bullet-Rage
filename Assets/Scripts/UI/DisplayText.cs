@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class DisplayText : MonoBehaviour
 {
-    public TextMeshProUGUI objText;
+
     public TMP_InputField display;
     public DBManager dbManager;
     public Button createButton; 
@@ -23,11 +23,6 @@ public class DisplayText : MonoBehaviour
         alertPanel.SetActive(false);
         alertButton.onClick.AddListener(OnAlertButtonClick);
         createButton.onClick.AddListener(OnCreateButtonClick);
-        if (objText != null)
-        {
-            string userName = PlayerPrefs.GetString("user_name", "").ToUpper();
-            UpdateTextWithUserName(userName);
-        }
     }
 
     private void Create()
@@ -41,7 +36,7 @@ public class DisplayText : MonoBehaviour
         if (dbManager != null)
         {
             DBManager.UserData newUser = new DBManager.UserData { username = userName, score = 0, gameTime = 0 };
-            StartCoroutine(dbManager.CreateOrUpdateUser(newUser, (response) => {
+            StartCoroutine(dbManager.CreateUser(newUser, (response) => {
                 if (response.Contains("Username already exists"))
                 {
                     Debug.LogError("This username is already taken. Please choose another.");
@@ -49,11 +44,10 @@ public class DisplayText : MonoBehaviour
                 }
                 else
                 {
-                    SceneManager.LoadScene("Menú");
                     PlayerPrefs.SetString("user_name", userName);
                     PlayerPrefs.Save();
-                    UpdateTextWithUserName(userName);
                     Debug.Log("User created successfully!");
+                    SceneManager.LoadScene("Menú");
                 }
             }));
         }
@@ -88,9 +82,4 @@ public class DisplayText : MonoBehaviour
        
     }
     
-
-    public void UpdateTextWithUserName(string userName)
-    {
-        objText.text = string.Format(objText.text, $"<b>{userName}</b>");
-    }
 }

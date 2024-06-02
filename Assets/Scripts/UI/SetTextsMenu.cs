@@ -26,6 +26,7 @@ public class SetTextsMenu : MonoBehaviour
         if (dbManager != null)
         {
             currentUsername = PlayerPrefs.GetString("user_name", "");
+            Debug.Log("el nombre de usuario es" + currentUsername);
             StartCoroutine(dbManager.GetTopScorer(ProcessTopScorer));
             StartCoroutine(dbManager.GetUserBestScore(currentUsername, ProcessUserBestScore));
             StartCoroutine(dbManager.GetScores(ProcessScores));
@@ -87,7 +88,11 @@ public class SetTextsMenu : MonoBehaviour
                 {
                     displayText += $"<mspace=0.6em>{player.username,-16} {player.score,5}   {FormatTime(player.game_time),-5}\n</mspace>";
                 }
-                scoresText.text = displayText;
+
+                if (scoresText != null)
+                {
+                    scoresText.text = displayText; 
+                }
             }
             else
             {

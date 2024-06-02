@@ -4,18 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbbb2d4d-933d-400f-9fd6-f2e2b8bca2a3" name="Changes" comment="">
+    <list default="true" id="fbbb2d4d-933d-400f-9fd6-f2e2b8bca2a3" name="Changes" comment="pantalla de gameOver y guardado de datos">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Bullet Rage/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Bullet Rage/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Escenario.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Escenario.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Login.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Login.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menú.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menú.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/IA/EnemyLogic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/IA/EnemyLogic.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PauseManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetTextsMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SetTextsMenu.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameTimer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LifeBarManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LifeBarManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SetTextsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SetTextsMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TextChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TextChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UserDataManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UserDataManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/web/DBManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/web/DBManager.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="bade_datos" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,8 +49,29 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dfc17dda9cbb441b8dc74d81535b7d4f10200/c1/4373f8f1/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/GameOverManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/UserDataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/WlcomeTextUpdate.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/UserNameManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/UserNameManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/UserNameManager.cs.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/web/DBManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/web/DBManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/USER/Desktop/universidad/Multimedia/proyecto_Multimedia/Bullet Rage/Assets/Scripts/web/DBManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation@1.1.5/Editor/Updater/NavMeshSceneConverter.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.burst@1.8.12/Unity.Burst.CodeGen/ILPostProcessing.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutineUtility.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/AssemblyNameProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/VSCodeScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.10/Editor/Debugging/DebugWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.10/Editor/Lighting/ProbeVolume/ProbeGIBaking.VirtualOffset.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.high-definition@14.0.10/Editor/Core/TextureCombiner/TextureCombiner.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.high-definition@14.0.10/Runtime/Debug/DebugDisplayMaterial.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.high-definition@14.0.10/Runtime/Material/Fabric/Fabric.hlsl" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.high-definition@14.0.10/Tests/Editor/Utilities/FurnaceTests.compute" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.searcher@4.9.2/Tests/Editor/SearcherTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.settings-manager@2.0.1/Editor/Attributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.settings-manager@2.0.1/Editor/UserSetting.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.settings-manager@2.0.1/Editor/UserSettingsRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.9.2/Editor/VisualScripting.Core/Plugin/BoltCoreResources.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/Proyectos Unity/My project Principal/Assets/Scripts/CameraScript.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="false" />
@@ -67,7 +88,7 @@
     "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "andresb/mejoras-base-de-datos",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -153,7 +174,7 @@
       <workItem from="1716064115678" duration="4714000" />
       <workItem from="1716154685475" duration="6720000" />
       <workItem from="1716336616287" duration="9515000" />
-      <workItem from="1717353242267" duration="5844000" />
+      <workItem from="1717353242267" duration="11818000" />
     </task>
     <task id="LOCAL-00001" summary="se corrigen datos de la db">
       <option name="closed" value="true" />
@@ -179,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716345956773</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pantalla de gameOver y guardado de datos">
+      <option name="closed" value="true" />
+      <created>1717359615227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717359615227</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +222,17 @@
     <option name="unityProjectFolder" value="true" />
   </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -221,38 +261,7 @@
     <MESSAGE value="se corrigen datos de la db" />
     <MESSAGE value="Se añaden sonidos" />
     <MESSAGE value="correciones sonidos, barra de vida, tips en pantalla, gravedad" />
-    <option name="LAST_COMMIT_MESSAGE" value="correciones sonidos, barra de vida, tips en pantalla, gravedad" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs</url>
-          <line>38</line>
-          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\UserNameManager.cs" containingFunctionPresentation="Method 'Create'">
-            <startOffsets>
-              <option value="1000" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1030" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/UserNameManager.cs</url>
-          <line>36</line>
-          <properties documentPath="C:\Users\USER\Desktop\universidad\Multimedia\proyecto_Multimedia\Bullet Rage\Assets\Scripts\UserNameManager.cs" containingFunctionPresentation="Method 'Create'">
-            <startOffsets>
-              <option value="958" />
-            </startOffsets>
-            <endOffsets>
-              <option value="977" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="pantalla de gameOver y guardado de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="pantalla de gameOver y guardado de datos" />
   </component>
 </project>
