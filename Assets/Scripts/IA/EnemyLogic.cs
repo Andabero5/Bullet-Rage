@@ -27,9 +27,8 @@ public class EnemyLogic : MonoBehaviour
     private string enemyTag;
     private AudioSource audioSource;
     private Coroutine audioCoroutine;
-    
-    
-   //configuración audios
+
+    // Configuración audios
     private SoundManager soundManager;
 
     // Índices de los clips de audio para cada tipo de enemigo
@@ -55,7 +54,6 @@ public class EnemyLogic : MonoBehaviour
     private float tortoiseBossMaxDistance = 10f;
     private float cyberMonsterMaxDistance = 5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         if (enemy)
@@ -67,17 +65,17 @@ public class EnemyLogic : MonoBehaviour
             throw new System.Exception("There is no tag assigned to the enemy object");
         }
 
-        target = GameObject.Find("Player");
+        target = GameObject.FindWithTag("Player");
         playerLife = target.GetComponent<Life>();
 
-        if(playerLife == null)
+        if (playerLife == null)
         {
             throw new System.Exception("The object player does not have a component Life");
         }
 
         playerLogic = target.GetComponent<PlayerLogic>();
 
-        if(playerLogic == null)
+        if (playerLogic == null)
         {
             throw new System.Exception("The object player does not have a component PlayerLogic");    
         }
@@ -98,11 +96,9 @@ public class EnemyLogic : MonoBehaviour
             throw new Exception("SoundManager not found in the scene.");
         }
 
-
         PlayEnemyAudio();
     }
 
-    // Update is called once per frame
     void Update()
     {
         checkLife();
@@ -114,9 +110,9 @@ public class EnemyLogic : MonoBehaviour
     void isInFrontOfThePlayer()
     {
         Vector3 goForward = transform.forward;
-        Vector3 targetPlayer = (GameObject.Find("Player").transform.position - transform.position).normalized;
+        Vector3 targetPlayer = (GameObject.FindWithTag("Player").transform.position - transform.position).normalized;
 
-        if(Vector3.Dot(goForward, targetPlayer) < 0.6f)
+        if (Vector3.Dot(goForward, targetPlayer) < 0.6f)
         {
             isLooking = false;
         }
@@ -142,7 +138,7 @@ public class EnemyLogic : MonoBehaviour
     void checkLife()
     {
         if (isLife0) return;
-        if(life.value <= 0)
+        if (life.value <= 0)
         {
             isLife0 = true;
             agent.isStopped = true;
@@ -151,17 +147,17 @@ public class EnemyLogic : MonoBehaviour
             if (enemyTag == "AnkleGrabber")
             {
                 animator.SetBool("Dies", true);
-                Invoke(nameof(UpdateScore), 0.5f);
+                Score(50);
             }
             if (enemyTag == "TortoiseBoss")
             {
                 animator.SetBool("Death", true);
-                Invoke(nameof(UpdateScore), 0.5f);
+                Score(100);
             }
             if (enemyTag == "CyberMonster")
             {
                 animator.SetBool("Death", true);
-                Invoke(nameof(UpdateScore), 0.5f);
+                Score(200);
             }
             if (audioCoroutine != null)
             {
@@ -173,28 +169,11 @@ public class EnemyLogic : MonoBehaviour
         }
     }
 
-    private void UpdateScore()
-    {
-        if (enemyTag == "AnkleGrabber")
-        {
-            Score(50);
-        }
-        else if (enemyTag == "TortoiseBoss")
-        {
-            Score(100);
-        }
-        else if (enemyTag == "CyberMonster")
-        {
-            Score(200);
-        }
-    } 
     private static void Score(int scoreSum)
     {
-        int currentScore = PlayerPrefs.GetInt("score", 0);
-        int newScore = currentScore + scoreSum;
+        var newScore = PlayerPrefs.GetInt("score", 0) + scoreSum;
         PlayerPrefs.SetInt("score", newScore);
-        PlayerPrefs.Save();
-        Debug.Log($"Score updated. New score: {newScore}");
+        Debug.Log("estoy guardando en preferencias");
     }
 
     void chase()
@@ -212,7 +191,7 @@ public class EnemyLogic : MonoBehaviour
         if (playerLogic.isLife0) return;
         float targetDistance = Vector3.Distance(target.transform.position, transform.position);
 
-        if(targetDistance <= 3.0 && isLooking)
+        if (targetDistance <= 3.0f && isLooking)
         {
             attack();
         }
@@ -247,10 +226,31 @@ public class EnemyLogic : MonoBehaviour
         agent.speed = speed;
         agent.angularSpeed = angularSpeed;
     }
-    
-    
-    
-    
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isLooking = true;
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isLooking = true;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            isLooking = false;
+        }
+    }
+
     void PlayEnemyAudio()
     {
         switch (enemyTag)
@@ -259,15 +259,14 @@ public class EnemyLogic : MonoBehaviour
                 audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, ankleGrabberAudioIndex, 0.1f, ankleGrabberSpatialBlend, ankleGrabberSpread, ankleGrabberMinDistance, ankleGrabberMaxDistance, 10f));
                 break;
             case "TortoiseBoss":
-                audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, tortoiseBossAudioIndex, 1.0f, tortoiseBossSpatialBlend, tortoiseBossSpread, tortoiseBossMinDistance, tortoiseBossMaxDistance,5));
+                audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, tortoiseBossAudioIndex, 1.0f, tortoiseBossSpatialBlend, tortoiseBossSpread, tortoiseBossMinDistance, tortoiseBossMaxDistance, 5f));
                 break;
             case "CyberMonster":
-                audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, cyberMonsterAudioIndex, 1.0f, cyberMonsterSpatialBlend, cyberMonsterSpread, cyberMonsterMinDistance, cyberMonsterMaxDistance,5));
+                audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, cyberMonsterAudioIndex, 1.0f, cyberMonsterSpatialBlend, cyberMonsterSpread, cyberMonsterMinDistance, cyberMonsterMaxDistance, 5f));
                 break;
             default:
                 Debug.LogWarning("Unknown enemy tag: " + enemyTag);
                 break;
         }
     }
-
 }

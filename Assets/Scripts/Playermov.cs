@@ -9,23 +9,28 @@ public class PlayerMov : MonoBehaviour
 {
     public float runSpeed = 7f;
     public float rotationSpeed = 250f;
-    
     public Animator animator;
 
     private float x, y;
-    
-    public Rigidbody rb;
+
     public float alturaSalto = 3f;
+    public float gravedad = -9.81f;
+    private Vector3 velocidad;
 
     public Transform checkPiso;
-    private float distanciaPiso = 0.1f;
+    private float distanciaPiso = 0.4f;
     public LayerMask maskPiso;
-    bool enPiso;
+    private bool enPiso;
 
     public float mouseSensitivity = 100f;
+    public Camera camaraPersonaje;
+    public CharacterController characterController;
 
     private float yaw = 0f;
-  
+    private float pitch = 0f;
+    public float pitchMin = -30f;
+    public float pitchMax = 60f;
+
     private SoundManager soundManager;
     private AudioSource audioSource;
 
@@ -50,23 +55,17 @@ public class PlayerMov : MonoBehaviour
         }
 
         yaw = transform.eulerAngles.y;
+        pitch = 0f;
         footstepTimer = footstepDelay; // Inicializar el temporizador
+
+        Cursor.lockState = CursorLockMode.Locked; // Ocultar y bloquear el cursor en el centro de la pantalla
+        Cursor.visible = false;
     }
-    
+
     void Update()
     {
-        // Rotación basada en el mouse
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        yaw += mouseX;
-        transform.rotation = Quaternion.Euler(0f, yaw, 0f);
-        
-        // Obtener entrada del teclado
-        x = Input.GetAxis("Horizontal");
-        y = Input.GetAxis("Vertical");
-
-        // Mover el personaje
-        Vector3 movement = transform.right * x + transform.forward * y; // Cálculo del vector de movimiento
-        transform.position += movement * runSpeed * Time.deltaTime; // Aplicar movimiento
+        MovimientoDeCamara();
+        MovimientoDelPersonaje();
 
         // Animaciones
         animator.SetFloat("velx", x);
@@ -87,18 +86,52 @@ public class PlayerMov : MonoBehaviour
             animator.SetBool("otro", false);
         }
 
-        // Salto
+        // Verificar si está en el suelo
         enPiso = Physics.CheckSphere(checkPiso.position, distanciaPiso, maskPiso);
-        if (Input.GetKey("space") && enPiso)
+
+        if (enPiso && velocidad.y < 0)
+        {
+            velocidad.y = -2f;
+        }
+
+        // Salto
+        if (Input.GetKeyDown(KeyCode.Space) && enPiso)
         {
             animator.Play("jump");
-            Invoke("Jump", 0.001f);
+            velocidad.y = Mathf.Sqrt(alturaSalto * -2f * gravedad);
         }
+
+        // Aplicar gravedad
+        velocidad.y += gravedad * Time.deltaTime;
+        characterController.Move(velocidad * Time.deltaTime);
     }
 
-    public void Jump()
+    void MovimientoDelPersonaje()
     {
-        rb.AddForce(Vector3.up * alturaSalto, ForceMode.Impulse);
+        // Obtener entrada del teclado
+        x = Input.GetAxis("Horizontal");
+        y = Input.GetAxis("Vertical");
+
+        // Mover el personaje
+        Vector3 movement = transform.right * x + transform.forward * y; // Cálculo del vector de movimiento
+        characterController.Move(movement * runSpeed * Time.deltaTime); // Aplicar movimiento
+    }
+
+    void MovimientoDeCamara()
+    {
+        // Movimiento de la cámara en base al movimiento del mouse
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+
+        yaw += mouseX;
+        pitch -= mouseY;
+        pitch = Mathf.Clamp(pitch, pitchMin, pitchMax);
+
+        // Rotación del jugador
+        transform.localRotation = Quaternion.Euler(0f, yaw, 0f);
+
+        // Rotación de la cámara
+        camaraPersonaje.transform.localRotation = Quaternion.Euler(pitch, 0f, 0f);
     }
 
     private void HandleFootsteps()
