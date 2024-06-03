@@ -161,9 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd25abfdc6806e94d9623fe101a96556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantity: 0.3
-  maxQuantity: 0.3
-  time: 1
+  quantity: 0.1
+  maxQuantity: 0.1
+  time: 2
 --- !u!114 &485261690957016989
 MonoBehaviour:
   m_ObjectHideFlags: 0

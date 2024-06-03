@@ -151,6 +151,7 @@ MonoBehaviour:
   noShootTime: 0
   canShoot: 0
   reloading: 0
+  shootPoint: {fileID: 0}
   isAShoot: {fileID: 0}
   isWithoutBullets: {fileID: 0}
   isTakingInMag: {fileID: 0}
@@ -171,13 +172,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463872367739468}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd25abfdc6806e94d9623fe101a96556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quantity: 0.3
-  maxQuantity: 0.3
+  quantity: 0.1
+  maxQuantity: 0.1
   time: 2
 --- !u!114 &4518635293331570978
 MonoBehaviour:
