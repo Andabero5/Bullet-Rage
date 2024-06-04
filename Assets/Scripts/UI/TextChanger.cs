@@ -38,6 +38,7 @@ public class TextChanger : MonoBehaviour
             return;
         }
 
+        //currentScore = PlayerPrefs.SetInt("score", 0); /*Línea de utilidad para testear portal*/
         currentScore = PlayerPrefs.GetInt("score", 0);
         UnityEngine.Debug.Log(currentScore);
         UpdateScoreText();
