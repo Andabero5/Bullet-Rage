@@ -56,6 +56,7 @@ public class EnemyLogic : MonoBehaviour
 
     void Start()
     {
+
         if (enemy)
         {
             enemyTag = enemy.tag;
@@ -173,6 +174,7 @@ public class EnemyLogic : MonoBehaviour
     {
         var newScore = PlayerPrefs.GetInt("score", 0) + scoreSum;
         PlayerPrefs.SetInt("score", newScore);
+
         Debug.Log("estoy guardando en preferencias");
     }
 

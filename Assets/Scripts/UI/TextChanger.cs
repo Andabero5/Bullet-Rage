@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 
@@ -28,16 +29,17 @@ public class TextChanger : MonoBehaviour
     {
         if (texto == null)
         {
-            Debug.LogError("Text component is not assigned.");
+            UnityEngine.Debug.LogError("Text component is not assigned.");
             return;
         }
         if (scoreText == null)
         {
-            Debug.LogError("Score Text component is not assigned.");
+            UnityEngine.Debug.LogError("Score Text component is not assigned.");
             return;
         }
-        
+
         currentScore = PlayerPrefs.GetInt("score", 0);
+        UnityEngine.Debug.Log(currentScore);
         UpdateScoreText();
         StartCoroutine(ChangeTextRoutine());
     }
