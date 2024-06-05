@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 public class DisplayText : MonoBehaviour
 {
-
     public TMP_InputField display;
     public DBManager dbManager;
     public Button createButton; 
