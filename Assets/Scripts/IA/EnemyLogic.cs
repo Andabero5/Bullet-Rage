@@ -258,7 +258,7 @@ public class EnemyLogic : MonoBehaviour
         switch (enemyTag)
         {
             case "AnkleGrabber":
-                audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, ankleGrabberAudioIndex, 0.1f, ankleGrabberSpatialBlend, ankleGrabberSpread, ankleGrabberMinDistance, ankleGrabberMaxDistance, 10f));
+                audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, ankleGrabberAudioIndex, 0.5f, ankleGrabberSpatialBlend, ankleGrabberSpread, ankleGrabberMinDistance, ankleGrabberMaxDistance, 10f));
                 break;
             case "TortoiseBoss":
                 audioCoroutine = StartCoroutine(soundManager.SelectAudioWithDelay(audioSource, tortoiseBossAudioIndex, 1.0f, tortoiseBossSpatialBlend, tortoiseBossSpread, tortoiseBossMinDistance, tortoiseBossMaxDistance, 5f));

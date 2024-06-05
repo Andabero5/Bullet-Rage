@@ -257,6 +257,7 @@ MonoBehaviour:
   speed: 3.5
   angularSpeed: 120
   damage: 20
+  other: {fileID: 0}
   isLooking: 0
 --- !u!114 &6585028218788277731
 MonoBehaviour:
@@ -270,7 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b47c2391e8219468df35d7c6fbff52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 100
+  value: 500
 --- !u!82 &9035119209491751295
 AudioSource:
   m_ObjectHideFlags: 0

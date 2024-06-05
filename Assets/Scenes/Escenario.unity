@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4420225, g: 0.48388112, b: 0.532523, a: 1}
+  m_IndirectSpecularColor: {r: 0.44202322, g: 0.48388177, b: 0.53252375, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -475,6 +475,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 100000, guid: c685db5bd3a0f9b4d8ddb667b78d772f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c685db5bd3a0f9b4d8ddb667b78d772f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -863,7 +867,8 @@ MonoBehaviour:
   zombiePrefab: {fileID: 1335500218136280, guid: e10e470cb8ac58346ab2adcf73cc6e93, type: 3}
   puntosDeGeneracion:
   - {fileID: 1614700604}
-  tiempoDeGeneracion: 25
+  tiempoDeGeneracion: 12
+  scoreLimit: 1300
 --- !u!4 &247819399
 Transform:
   m_ObjectHideFlags: 0
@@ -3409,7 +3414,8 @@ MonoBehaviour:
   zombiePrefab: {fileID: 1335500218136280, guid: e10e470cb8ac58346ab2adcf73cc6e93, type: 3}
   puntosDeGeneracion:
   - {fileID: 1693905616}
-  tiempoDeGeneracion: 90
+  tiempoDeGeneracion: 60
+  scoreLimit: 1300
 --- !u!4 &960159574
 Transform:
   m_ObjectHideFlags: 0
@@ -3672,7 +3678,8 @@ MonoBehaviour:
   puntosDeGeneracion:
   - {fileID: 259024921}
   - {fileID: 1474745538}
-  tiempoDeGeneracion: 10
+  tiempoDeGeneracion: 5
+  scoreLimit: 1300
 --- !u!4 &981834933
 Transform:
   m_ObjectHideFlags: 0
@@ -6219,7 +6226,8 @@ MonoBehaviour:
   zombiePrefab: {fileID: 6780515916345050249, guid: 684c059010d7e104580fc3e58a4860e3, type: 3}
   puntosDeGeneracion:
   - {fileID: 1190778837}
-  tiempoDeGeneracion: 60
+  tiempoDeGeneracion: 30
+  scoreLimit: -1
 --- !u!4 &1818802375
 Transform:
   m_ObjectHideFlags: 0
@@ -6353,10 +6361,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7617273427668875841, guid: 656835c98f7180548bfc0a3c70bdbd94, type: 3}
-      propertyPath: enemy
-      value: 
-      objectReference: {fileID: 2070944435}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6686,11 +6690,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058845500}
   m_CullTransparentMesh: 1
---- !u!1 &2070944435 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1363024495875198, guid: 656835c98f7180548bfc0a3c70bdbd94, type: 3}
-  m_PrefabInstance: {fileID: 1931255817}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2078868046
 GameObject:
   m_ObjectHideFlags: 0
@@ -7030,8 +7029,8 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 1
   m_Enabled: 1
   serializedVersion: 5
   m_Convex: 1

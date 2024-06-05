@@ -3473,6 +3473,7 @@ MonoBehaviour:
   speed: 12
   angularSpeed: 120
   damage: 7
+  other: {fileID: 0}
   isLooking: 0
 --- !u!114 &7810166728852593372
 MonoBehaviour:
@@ -3486,7 +3487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92b47c2391e8219468df35d7c6fbff52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 100
+  value: 300
 --- !u!82 &3436616413292351216
 AudioSource:
   m_ObjectHideFlags: 0
